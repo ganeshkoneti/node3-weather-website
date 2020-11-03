@@ -26,7 +26,7 @@ const location=search.value
 messageOne.textContent='loading..'
 messageTwo.textContent=''
 
-fetch('http://localhost:3006/weather?address='+location).then((Response)=>{
+fetch('/weather?address='+location).then((Response)=>{
     Response.json().then((data)=>{
         if(data.error){
            // console.log(data.error)
