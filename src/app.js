@@ -10,7 +10,7 @@ const forecast=require('./utils/forecast')
 
 
 const app = express()
-const port=process.env.PORT || 3006
+const port=process.env.PORT || 3007
 
 //define paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -29,8 +29,8 @@ app.get('', (req, res) => {
 
     res.render('index', {
 
-        title: 'weather app',
-        name: 'ganesh koneti'
+        title: 'Weather Application',
+        name: 'Ganesh Koneti'
     })
 
 })
@@ -52,7 +52,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
 
         title: 'Help',
-        name: 'How can i help you?'
+        name: 'Ganesh koneti'
     })
 
 })
@@ -103,7 +103,7 @@ app.get('/help/*',(req,res)=>{
     res.render('404',{
         title:'404',
         name:'ganesh',
-        errorMessage:'help article nnot found.'
+        errorMessage:'help article not found.'
     })
     
     })
@@ -113,7 +113,7 @@ app.get('*',(req,res)=>{
     res.render('404',{
         title:'404',
         name:'ganesh',
-        errorMessage:'page nnot found.'
+        errorMessage:'page not found.'
     })
     
 
